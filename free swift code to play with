@@ -1,0 +1,68 @@
+import SwiftUI
+
+
+            
+struct ContentView: View {
+    @State private var showingAlert = false
+    
+    var body: some View {
+        Button("Show Message ok?") {
+            showingAlert = true
+        }
+        .alert(isPresented:$showingAlert) {
+            Alert(
+                title: Text("Testing alert?"),
+                message: Text("Disaster coming."),
+                primaryButton: .destructive(Text("Delete")) {
+                    print("Deleting...")
+                },
+                secondaryButton: .cancel()
+            )
+        }
+        .tint(.red)
+        .buttonStyle(.borderedProminent)
+        .foregroundColor(.black)
+        
+        
+        // testing
+        
+        Divider()
+            .overlay(.pink)
+        
+        
+        Image(systemName: "globe")
+            .imageScale(.large)
+            .foregroundColor(.red)
+        Text("Hello, world!")
+            .foregroundColor(.orange)
+        
+        Text("Hello, There!")
+            .foregroundColor(.red)
+        
+        Divider()
+            .overlay(.pink)
+        
+        Picker(selection: .constant(1), label: Text("Chose here!")) {
+            Text("Option One").tag(1)
+            Text("Option Two").tag(2)
+            Text("Option Three").tag(3)
+            
+            
+                .background(.black)
+            
+            // tinkering testing app
+        }
+        
+       
+        
+     
+        
+    }
+    
+        
+    
+    
+}
+
+    
+    
