@@ -1,0 +1,40 @@
+// free code and tinkering on swift
+
+import SwiftUI
+
+struct ContentView: View {
+    @State private var showingAlert = false
+    
+    var body: some View {
+        Button("Click here!")
+        {
+            showingAlert = true
+            
+        }
+        
+        .alert("We need to talk OK?", isPresented: $showingAlert) {
+            Button("OK", role: .cancel) { }
+            Button("Continue") { }  }
+        .tint(.red)
+        .opacity(0.8)
+        .buttonStyle(.borderedProminent)
+        
+        Divider()
+            .overlay(.green)
+        MultiDatePicker(/*@START_MENU_TOKEN@*/"Label"/*@END_MENU_TOKEN@*/, selection: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Binding<Set<DateComponents>>@*/.constant([])/*@END_MENU_TOKEN@*/)
+            .tint(.green)
+        
+        
+        
+        Divider()
+            .overlay(.green)
+        
+        
+        
+     }        
+        
+        
+        
+        
+    
+}
