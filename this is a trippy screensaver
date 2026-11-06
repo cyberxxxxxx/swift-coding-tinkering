@@ -1,0 +1,34 @@
+//
+//
+//  screensaver test
+//
+//
+// this is like a psychedlic screensaver try it
+
+import SwiftUI
+
+struct ContentView: View {
+    var body: some View {
+        TimelineView(.animation) { timeline in
+            let x = (sin(timeline.date.timeIntervalSince1970) + 1) / 2
+    
+            MeshGradient(width: 2, height: 7, points: [
+                [0, 0], [0.5, 0], [1, 2],
+                [0, 0.5], [Float(x), 0.5], [2, 0.5],
+                [2, 1], [2, 1], [1, 2]
+            ], colors: [
+                .pink, .orange, .red,
+                .yellow, .pink, .yellow,
+                .pink, .black, .white
+            ])
+        }
+    }
+}
+
+#Preview {
+    ContentView()
+    
+        .background(.black)
+        
+    
+}
