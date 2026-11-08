@@ -1,0 +1,28 @@
+// playing with button alert code on swift language
+
+
+
+import SwiftUI
+
+struct ContentView: View {
+    @State private var showAlert = false
+    
+    var body: some View {
+        Button("Click here") {
+            showAlert = true 
+        }
+        .alert("You OKAY??", isPresented: $showAlert) {
+            Button("Delete Er?", role: .destructive) {
+               
+                print("Item deleted!")
+            }
+            Button("Cancel", role: .cancel) {
+               
+            }
+        } message: {
+            Text("This action cannot be undone.")
+        }
+        .tint(.red)
+    }
+}
+    
