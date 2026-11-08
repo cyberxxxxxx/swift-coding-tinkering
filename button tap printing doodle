@@ -1,0 +1,28 @@
+
+// just practicing on swift code language, very simple project
+
+import SwiftUI
+
+struct ContentView: View {
+    var body: some View {
+        VStack {
+            Image(systemName: "globe")
+                .imageScale(.large)
+                .foregroundColor(.red)
+                
+            Text("Hello, world!")
+              
+            // test
+            
+                  
+            Button("Click Here") {
+                print("Hello Button Tapped!!")            }
+            .tint(.red)
+            
+            // test
+            
+            
+            
+        }
+    }
+}
