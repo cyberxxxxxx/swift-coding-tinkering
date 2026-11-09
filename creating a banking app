@@ -1,0 +1,7 @@
+
+
+// a banking app on iPhone iOS or Mac OS is basically a portal to a webserver which stores the
+// banking details, which you access on your device - after you enter your banking password and
+// user details. It is very useful to be able to access your bank details remotely anywhere.
+// every bank should have a baking app in the app store. Some banks offer online banking on 
+// their website.
